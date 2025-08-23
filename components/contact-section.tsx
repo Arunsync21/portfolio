@@ -42,6 +42,7 @@ export function ContactSection() {
         })
       }
     } catch (error) {
+      console.error("Form submission failed:", error);
       setSubmitStatus({
         type: "error",
         message: "An unexpected error occurred. Please try again.",
@@ -96,7 +97,7 @@ export function ContactSection() {
           </h2>
           <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-4 sm:mb-6"></div>
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-            I'm always open to discussing new opportunities and interesting projects. Let's connect and explore how we
+            I&apos;m always open to discussing new opportunities and interesting projects. Let&apos;s connect and explore how we
             can work together to create something amazing!
           </p>
         </div>
@@ -107,7 +108,7 @@ export function ContactSection() {
             <CardHeader className="p-4 sm:p-6">
               <CardTitle className="text-xl sm:text-2xl text-gray-900 dark:text-white flex items-center">
                 <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500 mr-3 flex-shrink-0" />
-                Let's Connect
+                Let&apos;s Connect
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 sm:space-y-6 p-4 sm:p-6 pt-0">
@@ -262,8 +263,8 @@ export function ContactSection() {
               Ready to Build Something Amazing?
             </h4>
             <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-              Whether you have a project in mind, want to discuss opportunities, or just want to say hello, I'd love
-              to hear from you. Let's create something extraordinary together!
+              Whether you have a project in mind, want to discuss opportunities, or just want to say hello, I&apos;d love
+              to hear from you. Let&apos;s create something extraordinary together!
             </p>
           </CardContent>
         </Card>

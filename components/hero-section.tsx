@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 import { ResumeHandler } from "./resume-handler"
 
 export function HeroSection() {
