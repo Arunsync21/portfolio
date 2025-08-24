@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Code, Smartphone, Database, Settings, Monitor } from "lucide-react"
+import { Code, Palette, Monitor, ClipboardList, Smartphone, Database, Wrench } from "lucide-react"
 
 export function SkillsGrid() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
@@ -12,27 +12,53 @@ export function SkillsGrid() {
       title: "Programming Languages",
       icon: Code,
       skills: [
-        { name: "C#", level: 85 },
+        { name: "C#", level: 90 },
         { name: "JavaScript", level: 90 },
-        { name: "TypeScript", level: 85 },
-        { name: "HTML", level: 95 },
-        { name: "CSS", level: 90 },
+        { name: "TypeScript", level: 90 },
+        { name: "SQL", level: 95 },
       ],
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20",
+      color: "from-blue-500 to-indigo-500",
+      bgColor:
+        "from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20",
     },
     {
-      title: "Frontend Development",
-      icon: Monitor,
+      title: "Frontend Technologies",
+      icon: Palette,
       skills: [
+        { name: "HTML", level: 95 },
+        { name: "CSS", level: 90 },
+        { name: "jQuery", level: 80 },
         { name: "React JS", level: 90 },
         { name: "Next JS", level: 85 },
-        { name: "jQuery", level: 80 },
+      ],
+      color: "from-pink-500 to-rose-500",
+      bgColor:
+        "from-pink-50 to-rose-50 dark:from-pink-900/20 dark:to-rose-900/20",
+    },
+    {
+      title: "Backend & APIs",
+      icon: Database,
+      skills: [
+        { name: "ASP .Net Core (MVC/API)", level: 85 },
+        { name: "Entity Framework", level: 85 },
+        { name: "LINQ", level: 85 },
+        { name: "REST APIs", level: 90 },
+        { name: "SQL Server", level: 95 },
+      ],
+      color: "from-orange-500 to-red-500",
+      bgColor:
+        "from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20",
+    },
+    {
+      title: "Desktop Application Development",
+      icon: Monitor,
+      skills: [
         { name: "WinForms", level: 85 },
         { name: "WPF (MVVM)", level: 80 },
       ],
-      color: "from-green-500 to-emerald-500",
-      bgColor: "from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20",
+      color: "from-yellow-500 to-amber-500",
+      bgColor:
+        "from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20",
     },
     {
       title: "Mobile Development",
@@ -42,30 +68,35 @@ export function SkillsGrid() {
         { name: "Expo", level: 75 },
       ],
       color: "from-purple-500 to-pink-500",
-      bgColor: "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20",
+      bgColor:
+        "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20",
     },
     {
-      title: "Backend & Databases",
-      icon: Database,
+      title: "Development Tools",
+      icon: Wrench,
       skills: [
-        { name: "ASP .Net Core", level: 85 },
-        { name: "SQL", level: 90 },
+        { name: "Visual Studio", level: 90 },
+        { name: "Visual Studio Code", level: 90 },
+        { name: "Postman", level: 85 },
+        { name: "Swagger", level: 90 },
       ],
-      color: "from-orange-500 to-red-500",
-      bgColor: "from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20",
+      color: "from-sky-500 to-cyan-500",
+      bgColor:
+        "from-sky-50 to-cyan-50 dark:from-sky-900/20 dark:to-cyan-900/20",
     },
     {
       title: "Project Management",
-      icon: Settings,
+      icon: ClipboardList,
       skills: [
         { name: "GIT", level: 90 },
         { name: "JIRA", level: 85 },
         { name: "Azure DevOps", level: 80 },
       ],
-      color: "from-indigo-500 to-purple-500",
-      bgColor: "from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20",
-    },
-  ]
+      color: "from-teal-500 to-lime-500",
+      bgColor:
+        "from-teal-50 to-lime-50 dark:from-teal-900/20 dark:to-lime-900/20",
+    }
+  ];
 
   return (
     <section id="skills" className="py-12 sm:py-16 lg:py-20 relative">

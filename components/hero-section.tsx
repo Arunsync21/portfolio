@@ -49,7 +49,7 @@ export function HeroSection() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-fade-in leading-tight">
               Arunbalaji S
             </h1>
-            <div className="h-6 sm:h-8">
+            <div>
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 font-medium px-4">
                 {text}
                 <span className="animate-pulse">|</span>

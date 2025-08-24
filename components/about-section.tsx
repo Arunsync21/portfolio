@@ -16,12 +16,12 @@ export function AboutSection() {
           <div className="space-y-6 sm:space-y-8">
             <Card className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-md border-white/20 dark:border-gray-700/20 shadow-xl">
               <CardContent className="p-6 sm:p-8">
-                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-start sm:items-center flex-col sm:flex-row">
-                  <div className="w-2 h-6 sm:h-8 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mb-2 sm:mb-0 sm:mr-4"></div>
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                  <div className="w-2 h-6 sm:h-8 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mr-3 sm:mr-4 flex-shrink-0"></div>
                   Objective
                 </h3>
                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Seeking a position that allows me to advance my career by actively learning and applying emerging technologies, 
+                  Seeking a position that allows me to advance my career by actively learning and applying emerging technologies,
                   while leveraging my strong skills and collaborative abilities to contribute effectively to organizational success.
                 </p>
               </CardContent>
@@ -50,8 +50,8 @@ export function AboutSection() {
 
           <Card className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-md border-white/20 dark:border-gray-700/20 shadow-xl">
             <CardContent className="p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-6 sm:mb-8 flex items-start sm:items-center flex-col sm:flex-row">
-                <div className="w-2 h-6 sm:h-8 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mb-2 sm:mb-0 sm:mr-4"></div>
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-6 sm:mb-8 flex items-center">
+                <div className="w-2 h-6 sm:h-8 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mr-3 sm:mr-4 flex-shrink-0"></div>
                 Contact Information
               </h3>
               <div className="space-y-4 sm:space-y-6">

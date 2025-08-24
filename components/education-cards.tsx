@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { GraduationCap, Calendar, Award, Trophy } from "lucide-react"
+import { GraduationCap, Calendar, Award } from "lucide-react"
 
 export function EducationCards() {
   const education = [
@@ -12,32 +12,8 @@ export function EducationCards() {
       type: "Bachelor's Degree",
       color: "from-blue-500 to-purple-500",
       bgColor: "from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20",
-    },
-    {
-      degree: "HSC",
-      institution: "Sri Sundareswara Vidhya Sala Matriculation Higher Secondary School",
-      year: "2018",
-      grade: "87.75%",
-      type: "Higher Secondary",
-      color: "from-green-500 to-blue-500",
-      bgColor: "from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20",
-    },
-    {
-      degree: "SSLC",
-      institution: "Sri Sundareswara Vidhya Sala Matriculation Higher Secondary School",
-      year: "2016",
-      grade: "98.4%",
-      type: "Secondary School",
-      color: "from-purple-500 to-pink-500",
-      bgColor: "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20",
-    },
+    }
   ]
-
-  const getGradeIcon = (grade: string) => {
-    if (grade.includes("98.4")) return Trophy
-    if (grade.includes("8.13")) return Award
-    return Award
-  }
 
   return (
     <section id="education" className="py-20 relative">
@@ -49,11 +25,10 @@ export function EducationCards() {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {education.map((edu, index) => {
-            const GradeIcon = getGradeIcon(edu.grade)
-            return (
-              <Card
+        <div className="flex justify-center">
+          <div className="max-w-md w-full">
+            {education.map((edu, index) => (
+              < Card
                 key={index}
                 className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-md border-white/20 dark:border-gray-700/20 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden"
               >
@@ -72,7 +47,7 @@ export function EducationCards() {
 
                 <CardContent className="p-6 flex flex-col justify-between h-full">
                   <div className="space-y-4">
-                    <div className="h-16 sm:h-20 flex items-start">
+                    <div className="flex items-start">
                       <p className="text-gray-600 dark:text-gray-300 font-medium leading-relaxed">
                         {edu.institution}
                       </p>
@@ -86,17 +61,16 @@ export function EducationCards() {
                       <span className="text-gray-600 dark:text-gray-300 font-medium">{edu.year}</span>
                     </div>
                     <Badge className={`bg-gradient-to-r ${edu.color} text-white shadow-lg`}>
-                      <GradeIcon className="h-3 w-3 mr-1" />
+                      <Award className="h-3 w-3 mr-1" />
                       {edu.grade}
                     </Badge>
                   </div>
                 </CardContent>
-
               </Card>
-            )
-          })}
+            ))}
+          </div>
         </div>
       </div>
-    </section>
+    </section >
   )
 }

@@ -16,6 +16,7 @@ export function ContactSection() {
     type: "success" | "error" | null
     message: string
   }>({ type: null, message: "" })
+  const year = new Date().getFullYear()
 
   const handleSubmit = async (formData: FormData) => {
     setIsSubmitting(true)
@@ -274,7 +275,7 @@ export function ContactSection() {
       <div className="mt-12 sm:mt-20 pt-6 sm:pt-8 border-t border-white/20 dark:border-gray-700/20">
         <div className="text-center px-4">
           <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-            © 2025 Arunbalaji S. Crafted with ❤️ using Next.js, Tailwind CSS, and creativity.
+            © {year} Arunbalaji S. Crafted with ❤️ using Next.js, Tailwind CSS, and creativity.
           </p>
         </div>
       </div>
